@@ -1,13 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Helmet } from "react-helmet";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import AboutSection from "@/components/AboutSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import SkillsSection from "@/components/SkillsSection";
+import TestimonialSection from "@/components/TestimonialSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>Sumit | Python Developer & Data Scientist</title>
+        <meta name="description" content="Portfolio of Sumit, Python Developer and Data Scientist specializing in data analysis, machine learning, and AI applications." />
+      </Helmet>
+      
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        
+        <main className="flex-grow">
+          <Hero />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <TestimonialSection />
+          <ContactSection />
+        </main>
+        
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
